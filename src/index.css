@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI Light", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --bgColor: #d0ddd0;
+  --brdrColor: #504b38;
+  --fontColor: #000000;
+  --Card1: #ffdab3;
+  --Card2: #9acbd0;
+  --Card3: #a9c46c;
+  --Card4: #d0ddd0;
+  --goldColor: #ffb000;
+  --redColor: #c40c0c;
+  --FooterColor: #2d4059;
+  --iconColor: #003092;
+  --alertColor: #1b4d3e;
+  --plsColor: #ada991;
+}
+.bgColor {
+  background-color: var(--bgColor);
+}
+.card1 {
+  background-color: var(--Card1);
+}
+.card2 {
+  background-color: var(--Card2);
+}
+.card3 {
+  background-color: var(--Card3);
+}
+.card4 {
+  background-color: var(--Card4);
+}
+/* navbar */
+.nav-heading {
+  color: var(--fontColor);
+  font-weight: bolder;
+}
+.icon {
+  color: var(--iconColor);
+}
+.bgFoter {
+  background-color: var(--iconColor);
+  color: #eee;
+}
+.bg-btn {
+  background-color: var(--iconColor);
+  color: #d0ddd0;
+}
+.bg-btn:hover {
+  background-color: #2d4059;
+  color: #d0ddd0;
+}
+.cursor:hover {
+  cursor: pointer;
+  color: var(--iconColor);
+}
+.card-count {
+  background-color: var(--redColor); /* لون الخلفية */
+  color: white; /* لون النص */
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px; /* يرفع الرقم فوق */
+  right: -8px; /* يحرك الرقم ناحية اليمين */
+}
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
+  background: white; /* لون الخلفية */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* تأثير ظل لجعله مميزًا */
+
+  z-index: 1000;
+}
+.massage-nav {
+  top: 15px;
+  right: -80px;
+  background-color: var(--Card3);
+  color: #eee;
+  width: 250px;
+  padding: 2px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .massage-nav {
+    width: 185px;
+    font-size: 12px;
+    top: 15px;
+    right: -20px;
+  }
+}
+/* navbar */
+/* home */
+.icon-brdr {
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.card {
+  margin: 5px;
+  border: none;
+  background-color: #eee;
+}
+.card-div {
+  margin: auto;
+}
+.card-img {
+  width: 100%; /* الصورة تأخذ عرض الكارت بالكامل */
+  height: 200px; /* تحديد ارتفاع ثابت لكل الصور */
+  object-fit: cover; /* يجعل الصورة تغطي المساحة دون تشويه */
+  border-radius: 10px; /* تحسين شكل الصور */
+}
+.rating {
+  background-color: var(--iconColor);
+  color: var(--plsColor);
+  width: 40%;
+  margin: 10px;
+}
+.star-icon {
+  color: var(--goldColor);
+}
+.border-bottom {
+  width: 100%;
+  height: 3px;
+  background-color: var(--iconColor);
+}
+.heart-icon {
+  color: var(--redColor);
+}
+.heart-icon,
+.border-bottom {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.card:hover .border-bottom,
+.card:hover .heart-icon {
+  opacity: 1;
+  visibility: visible;
+}
+/* home */
+/* sidebar */
+.offcanvas-body {
+  max-height: 80vh; /* يحدد أقصى ارتفاع للـ sidebar */
+  overflow-y: auto; /* يضيف التمرير إذا زاد المحتوى */
+  /* padding: 10px; */
+}
+
+/* sidebar */
+/* card-details */
+.product-details-logo {
+  position: relative;
+  background-image: url("/imgs/violet.jpg");
+  width: 100%;
+  min-height: 40vh;
+  max-height: 50vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.product-details-heading
+ {
+  font-weight: bold;
+  color: var(--fontColor);
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.error{
+margin-top: 50px;
+padding: 20px;
+background-color: var(--Card2);
+}
